@@ -3,7 +3,6 @@
 
   /* On inclut la classe Smarty */
   require_once("tpl/Smarty.class.php");
-  /*require_once("tpl/SmartyBC.class.php");*/
 
   /*
   On initialise les variables message et id
@@ -38,31 +37,29 @@
     $page = $_GET['p'];
     $index = ($page - 1)* $mpp;
   }
-  $query = 'SELECT * , messages.id as message_id FROM messages INNER JOIN utilisateur ON messages.utilisateur_id = utilisateur.id LIMIT '.$index.','.$mpp.'';
+  $query = 'SELECT *, messages.id as message_id FROM messages INNER JOIN utilisateur ON messages.utilisateur_id = utilisateur.id LIMIT '.$index.','.$mpp.'';
   $stmt = $pdo->prepare($query);
   $stmt->execute();
+  $tab=$stmt->fetchAll();
+  var_dump($tab);
   /*
   On récupère les messages dans la BDD
   Si l'utilisateur clique sur modifier, on affiche le nouveau message
   Si l'utilisateur clique sur supprimer, on supprime le message sélectionné
   */
-  $query = 'SELECT * FROM messages';
+  /*$query = 'SELECT * FROM messages';
   $stmt = $pdo->query($query);
   while ($data = $stmt->fetch())
   {
     /*On affiche les boutons de création, modification et suppression seulement si l'utilisateur est connecté*/
-    if($connecte == true)
-    {
-    }else
-    {
-    }
-  }
+
+  /*}
   $requete = 'SELECT COUNT(*) as total_messages FROM messages';
   $prep = $pdo->query($requete);
   $data = $prep->fetch();
-  $nombre_message = $data['total_messages'];
+  $nombre_message = $data['total_messages'];*/
 
-  $nb_pages = ($nombre_message) ? ceil($nombre_message/$mpp) : 1;
+  /*$nb_pages = ($nombre_message) ? ceil($nombre_message/$mpp) : 1;
   $page = 0;
   if ($page > 1)
   {
@@ -77,7 +74,16 @@
   }else
   {
     $next = $page;
-  }
+  }*/
   $smarty = new Smarty();
+  $smarty->assign('table',$tab);
+  if($connecte == true)
+  {
+    $connecte = "co";
+  }else
+  {
+    $connecte = "deco";
+  }
+  $smarty->assign('connex', $connecte);
   $smarty->display("index.tpl");
 ?>

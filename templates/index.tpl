@@ -1,4 +1,5 @@
 {include file="haut.tpl"}
+
   <div class="row">
     <form method="post" action="message.php">
       <div class="col-sm-10">
@@ -14,31 +15,39 @@
       </div>
     </form>
   </div>
-  <blockquote>
-    <?= $data['contenu'] ?>
+  <!--<blockquote>
+
     <div class="col-sm-2">
-      <?php echo "<a href='index.php?id=" .$data['id']."&p=".$page."'><button type='button' class='btn btn-warning'>Modifier</button></a>" ?>
-    </div>
-    <div class="col-sm-2">
-      <?php echo "<a href='suppression.php?id=" .$data['id']."&p=".$page."'><button type='button' class='btn btn-danger'>Supprimer</button></a>" ?>
+      <a href='suppression.php?id=" .$data['id']. "'></a>
     </div>
     <div class="col-sm-12">
       <?= "Ajouté le ".$data['date'] ?>
     </div>
-  </blockquote>
+  </blockquote>-->
+
   <blockquote>
-    <?= $data['contenu'] ?>
-    <div class="col-sm-2">
-      <?php echo "<a href='index.php?id=" .$data['id']. "'></a>" ?>
-    </div>
-    <div class="col-sm-2">
-      <?php echo "<a href='suppression.php?id=" .$data['id']. "'></a>" ?>
-    </div>
-    <div class="col-sm-12">
-      <?= "Ajouté le ".$data['date'] ?>
-    </div>
+    {if $connex == "co"}
+      {foreach from=$table item=sms}
+        {$sms.contenu}
+        banane<br>
+        Ecrit par : {$sms.pseudo}
+        <br>
+        Ajouté le : {$sms.date}
+      {/foreach}
+      <div class="col-sm-2">
+        <a href='index.php?id=" .$data['id']."&p=".$page."'><button type='button' class='btn btn-warning'>Modifier</button></a>
+      </div>
+      <div class="col-sm-2">
+        <a href='suppression.php?id=" .$data['id']."&p=".$page."'><button type='button' class='btn btn-danger'>Supprimer</button></a>
+      </div>
+      <div class="col-sm-12">
+hello
+      </div>
+
+    {/if}
   </blockquote>
-<nav aria-label="Page navigation">
+
+<!--<nav aria-label="Page navigation">
   <ul class="pagination">
     <li>
       <a <?php echo "href='index.php?p=$previous'" ?> aria-label="Previous">
@@ -51,5 +60,6 @@
       </a>
     </li>
   </ul>
-</nav>
+</nav>-->
+
 {include file="bas.tpl"}

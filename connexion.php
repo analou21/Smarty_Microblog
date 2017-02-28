@@ -1,7 +1,6 @@
 <?php
 	include ('includes/connexion.inc.php');
 	require_once("tpl/Smarty.class.php");
-  /*require_once("tpl/SmartyBC.class.php");*/
 
 	/*
 	De part ce code php, on vérifie si les variables pseudo et password existent
@@ -35,5 +34,13 @@
   	}
 	}
 	$smarty = new Smarty();
+	if($connecte == true)
+  {
+    $connecte = "co";
+  }else
+  {
+    $connecte = "deco";
+  }
+  $smarty->assign('connex', $connecte);
 	$smarty->display("connexion.tpl");
 ?>

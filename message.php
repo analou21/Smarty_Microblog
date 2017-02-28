@@ -13,7 +13,7 @@ On fait une première condition sur la variable message : la variable existe-t-e
 	$id=$_POST['id'];
 	$message=$_POST['message'];
 
-	$query = "SELECT id FROM users where sid='$_COOKIE[sid]'";
+	$query = "SELECT id FROM utilisateur where sid='$_COOKIE[sid]'";
  	$prepare = $pdo->prepare($query);
  	$prepare->execute();
  	$data = $prepare->fetch();

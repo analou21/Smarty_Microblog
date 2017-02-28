@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-02-28 16:11:18
+  from "/var/www/html/PHP_Avance/micro_blog_2/templates/haut.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58b593166e8018_51519309',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b1add41f28f57528a9883008ac547d6affa0bd9d' => 
+    array (
+      0 => '/var/www/html/PHP_Avance/micro_blog_2/templates/haut.tpl',
+      1 => 1488294212,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58b593166e8018_51519309 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -24,11 +48,17 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
     <![endif]-->
     <!-- On appelle le script jquery.js pour pour pouvoir ajouter le jQuery dans le code -->
-    <script type="text/javascript" src="vendor/jquery/jquery.js"></script>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="vendor/jquery/jquery.js"><?php echo '</script'; ?>
+>
 
 </head>
 
@@ -52,18 +82,18 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                      {if $connex == "deco"}
+                      <?php if ($_smarty_tpl->tpl_vars['connex']->value == "deco") {?>
                       <a href="inscription.php">Inscription</a>
                     </li>
                     <li>
                       <!-- Rajout du bouton connection -->
                       <a href="connexion.php">Connexion</a>
-                      {/if}
+                      <?php }?>
                     </li>
                     <li>
-                      {if $connex == "co"}
+                      <?php if ($_smarty_tpl->tpl_vars['connex']->value == "co") {?>
                       <a href="deconnexion.php">D&eacute;connexion</a>
-                      {/if}
+                      <?php }?>
                     </li>
                 </ul>
             </div>
@@ -89,3 +119,5 @@
     <!-- About Section -->
     <section>
         <div class="container">
+<?php }
+}

@@ -1,4 +1,31 @@
-{include file="haut.tpl"}
+<?php
+/* Smarty version 3.1.30, created on 2017-02-28 16:17:29
+  from "/var/www/html/PHP_Avance/micro_blog_2/templates/connexion.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58b59489046a35_69183067',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '34a202cfcaedfce696e0efc487d001dc1130ffca' => 
+    array (
+      0 => '/var/www/html/PHP_Avance/micro_blog_2/templates/connexion.tpl',
+      1 => 1488285963,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:haut.tpl' => 1,
+    'file:bas.tpl' => 1,
+  ),
+),false)) {
+function content_58b59489046a35_69183067 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
   <div id="notif" class="hidden"></div><!-- div créée pour le script en jQuery -->
     <form id="form" method="post" action="connexion.php">
@@ -26,7 +53,8 @@
 	    Sinon, l'utilisateur peut accéder au contenu de la page
     -->
 
-    <!--<script>
+    <!--<?php echo '<script'; ?>
+>
 	  $(document).ready(function()
     {
       $('#form').submit(function()
@@ -49,7 +77,12 @@
         }
       });
     });
-  </script>-->
+  <?php echo '</script'; ?>
+>-->
   </div>
 
-{include file="bas.tpl"}
+<?php $_smarty_tpl->_subTemplateRender("file:bas.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php }
+}

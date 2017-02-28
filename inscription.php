@@ -1,5 +1,6 @@
 <?php
   include('includes/connexion.inc.php');
+  require_once("tpl/Smarty.class.php");
 
   /*Code qui permet à l'utilisateur de s'inscrire sur le blog*/
   if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['pseudo']))
@@ -17,4 +18,7 @@
     $prep->execute();
     header('Location: index.php');
   }
+
+  $smarty = new Smarty();
+  $smarty->display("inscription.tpl");
 ?>
