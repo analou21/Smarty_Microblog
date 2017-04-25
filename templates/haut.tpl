@@ -20,6 +20,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +53,8 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                      {if $connex == "deco"}
+                      <!-- Si l'utilisateur n'est pas connecté, il peut se connecter ou s'inscrire -->
+                      {if $connexion == "deco"}
                       <a href="inscription.php">Inscription</a>
                     </li>
                     <li>
@@ -61,7 +63,8 @@
                       {/if}
                     </li>
                     <li>
-                      {if $connex == "co"}
+                      <!-- Si l'utilisateur est connecté, il peut se déconnecté -->
+                      {if $connexion == "co"}
                       <a href="deconnexion.php">D&eacute;connexion</a>
                       {/if}
                     </li>

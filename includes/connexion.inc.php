@@ -1,9 +1,9 @@
 <?php
-  $pdo = new PDO('mysql:host=localhost;dbname=micro_blog', '', '', $arrExtraParam);
+  $pdo = new PDO('mysql:host=localhost;dbname=micro_blog', 'root', '', $arrExtraParam);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   /*Par défaut, l'utilisateur n'est pas connecté
-  Après qu'il connecte, on crée un cookie à partir de sid
+  Après qu'il se connecte, on crée un cookie à partir de sid
   Après la création de ce cookie, l'utilisateur est bien connecté*/
 
   $connecte=false;

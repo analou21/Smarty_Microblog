@@ -34,6 +34,7 @@
   	}
 	}
 	$smarty = new Smarty();
+	/* On teste si l'utilisateur est connecté ou déconnecté */
 	if($connecte == true)
   {
     $connecte = "co";
@@ -41,6 +42,10 @@
   {
     $connecte = "deco";
   }
-  $smarty->assign('connex', $connecte);
+	/*
+    Assigne la variable php que nous avons besoin en variables Smarty
+    Et on la transmets au tpl correspondant
+  */
+  $smarty->assign("connexion", $connecte);
 	$smarty->display("connexion.tpl");
 ?>

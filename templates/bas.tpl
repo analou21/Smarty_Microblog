@@ -26,8 +26,13 @@
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         Copyright &copy; Your Website 2016
+                    </div>
+                    <!-- Création d'une div pour les icônes Facebook et Twitter -->
+                    <div class="col-lg-6">
+                      <a class="icone facebook"></a>
+                      <a class="icone twitter"></a>
                     </div>
                 </div>
             </div>

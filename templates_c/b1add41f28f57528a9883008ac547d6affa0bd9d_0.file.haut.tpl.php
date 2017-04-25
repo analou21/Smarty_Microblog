@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-28 16:11:18
+/* Smarty version 3.1.30, created on 2017-03-29 17:41:12
   from "/var/www/html/PHP_Avance/micro_blog_2/templates/haut.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b593166e8018_51519309',
+  'unifunc' => 'content_58dbd5988b7ec1_74670143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1add41f28f57528a9883008ac547d6affa0bd9d' => 
     array (
       0 => '/var/www/html/PHP_Avance/micro_blog_2/templates/haut.tpl',
-      1 => 1488294212,
+      1 => 1490802069,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b593166e8018_51519309 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58dbd5988b7ec1_74670143 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -44,7 +44,8 @@ function content_58b593166e8018_51519309 (Smarty_Internal_Template $_smarty_tpl)
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="css/style.css">
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -82,7 +83,7 @@ function content_58b593166e8018_51519309 (Smarty_Internal_Template $_smarty_tpl)
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                      <?php if ($_smarty_tpl->tpl_vars['connex']->value == "deco") {?>
+                      <?php if ($_smarty_tpl->tpl_vars['connexion']->value == "deco") {?>
                       <a href="inscription.php">Inscription</a>
                     </li>
                     <li>
@@ -91,7 +92,7 @@ function content_58b593166e8018_51519309 (Smarty_Internal_Template $_smarty_tpl)
                       <?php }?>
                     </li>
                     <li>
-                      <?php if ($_smarty_tpl->tpl_vars['connex']->value == "co") {?>
+                      <?php if ($_smarty_tpl->tpl_vars['connexion']->value == "co") {?>
                       <a href="deconnexion.php">D&eacute;connexion</a>
                       <?php }?>
                     </li>

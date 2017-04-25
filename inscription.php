@@ -19,6 +19,10 @@
     header('Location: index.php');
   }
 
+  /* 
+    Assigne la variable php que nous avons besoin en variables Smarty
+    Et on la transmets au tpl correspondant
+  */
   $smarty = new Smarty();
   $smarty->display("inscription.tpl");
 ?>

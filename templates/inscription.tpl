@@ -1,3 +1,4 @@
+<!-- On inclut le header de la page -->
 {include file="haut.tpl"}
 
 <form method="post" action="inscription.php" id="form_inscription">
@@ -22,4 +23,5 @@
   <button type="submit" class="btn btn-default">Submit</button>
  </form>
 
+<!-- On inclut le footer de la page -->
 {include file="bas.tpl"}

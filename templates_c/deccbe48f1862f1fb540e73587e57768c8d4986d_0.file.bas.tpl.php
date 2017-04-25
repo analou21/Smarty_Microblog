@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-28 16:11:18
+/* Smarty version 3.1.30, created on 2017-03-29 17:43:17
   from "/var/www/html/PHP_Avance/micro_blog_2/templates/bas.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b59316979648_66177668',
+  'unifunc' => 'content_58dbd6152193b2_50147086',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'deccbe48f1862f1fb540e73587e57768c8d4986d' => 
     array (
       0 => '/var/www/html/PHP_Avance/micro_blog_2/templates/bas.tpl',
-      1 => 1485874899,
+      1 => 1490802160,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b59316979648_66177668 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58dbd6152193b2_50147086 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
         </div>
@@ -50,8 +50,12 @@ function content_58b59316979648_66177668 (Smarty_Internal_Template $_smarty_tpl)
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         Copyright &copy; Your Website 2016
+                    </div>
+                    <div class="col-lg-6">
+                      <a class="icone facebook"></a>
+                      <a class="icone twitter"></a>
                     </div>
                 </div>
             </div>

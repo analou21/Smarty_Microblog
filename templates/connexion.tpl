@@ -50,6 +50,5 @@
       });
     });
   </script>-->
-  </div>
 
 {include file="bas.tpl"}

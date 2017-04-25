@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-28 16:17:29
+/* Smarty version 3.1.30, created on 2017-03-14 17:24:23
   from "/var/www/html/PHP_Avance/micro_blog_2/templates/connexion.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b59489046a35_69183067',
+  'unifunc' => 'content_58c81937c06421_78955454',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '34a202cfcaedfce696e0efc487d001dc1130ffca' => 
     array (
       0 => '/var/www/html/PHP_Avance/micro_blog_2/templates/connexion.tpl',
-      1 => 1488285963,
+      1 => 1489508656,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:bas.tpl' => 1,
   ),
 ),false)) {
-function content_58b59489046a35_69183067 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58c81937c06421_78955454 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:haut.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -79,7 +79,6 @@ $_smarty_tpl->_subTemplateRender("file:haut.tpl", $_smarty_tpl->cache_id, $_smar
     });
   <?php echo '</script'; ?>
 >-->
-  </div>
 
 <?php $_smarty_tpl->_subTemplateRender("file:bas.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
